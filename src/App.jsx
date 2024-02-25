@@ -1,9 +1,14 @@
 import "./App.css";
+import Body from "./component/Body";
+import { Provider } from "react-redux";
+import appStore from "./utils/appstore";
 
 function App() {
   return (
     <>
-      <h3 className="text-lg text-orange-500 ">THis is the new project</h3>
+      <Provider store={appStore}>
+        <Body />
+      </Provider>
     </>
   );
 }
